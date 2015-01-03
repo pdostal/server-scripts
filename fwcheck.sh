@@ -6,15 +6,15 @@ while test $# -gt 0; do
 			shift
 			;;
 		-4)
-			iptables -nvL | sed -E "s/ ALGO.+//g" | grep -v "publicbanlist"
+			iptables -nvL | sed -E "s/ ALGO.+//g"
 			shift
 			;;
 		-6)
-			ip6tables -nvL | sed -E "s/ ALGO.+//g" | grep -v "publicbanlist"
+			ip6tables -nvL | sed -E "s/ ALGO.+//g"
 			shift
 			;;
 		-nat|--nat)
-			iptables -t nat -nvL | sed -E "s/ ALGO.+//g" | grep -v "publicbanlist"
+			iptables -t nat -nvL | sed -E "s/ ALGO.+//g"
 			shift
 			;;		
 		*)

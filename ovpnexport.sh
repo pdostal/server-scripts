@@ -1,7 +1,9 @@
 #!/bin/sh
+
 path="/etc/openvpn/"
 rsa="easy-rsa/keys/"
 pwd=`pwd`
+
 echo "Starting..."
 echo "* ${path}"
 echo "* ${path}${rsa}"
