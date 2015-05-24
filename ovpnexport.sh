@@ -21,8 +21,8 @@ else
   cp ${path}easy-rsa/keys/${1}.crt ${1}/crt.crt
   echo "- ${1}.key -> ${1}/key.key"
   cp ${path}easy-rsa/keys/${1}.key ${1}/key.key
-  echo "- client.ovpn -> ${1}/client.conf"
-  cp ${path}client.ovpn ${1}/client.conf
+  #echo "- client.ovpn -> ${1}/client.conf"
+  #cp ${path}client.ovpn ${1}/client.conf
   echo "- ${1}/ -> ${1}.zip"
   zip -rq /tmp/${1}.zip ${1}/*
   echo "- Removing ${1}/"
