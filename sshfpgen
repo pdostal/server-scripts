@@ -26,7 +26,7 @@ then
   fi
 fi
 
-for pubkey in /etc/ssh/ssh_host_*_key.pub /etc/ssh_host_*_key.pub
+for pubkey in /etc/ssh/ssh_host_*_key.pub /etc/ssh_host_*_key.pub ./ssh_host_*_key.pub
 do
   case "$(cut -d _ -f3 <<< "$pubkey")"
   in
@@ -48,4 +48,3 @@ do
     ;;
   esac
 done
-
