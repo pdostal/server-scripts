@@ -1,3 +1,3 @@
 #!/bin/bash
-echo addr show|ip -o -b -|cut -d' ' -f2,7
+echo addr show|ip -o -b -|cut -d' ' -f2,7 | grep "/"
 

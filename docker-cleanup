@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Based on http://netshare.containx.io/docs/nfs"
+echo "Delete exited containers"
+docker rm -v $(docker ps -a -q -f status=exited)
+echo "Cleaning unwanted images"
+docker rmi $(docker images -f "dangling=true" -q)
+echo "Cleaning unwanted volumes"
+docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes
+echo "Everything is done."

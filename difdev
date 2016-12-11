@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ `find ${1} -maxdepth 0 -printf "%D"` != `find ${2} -maxdepth 0 -printf "%D"` ]; then
+    echo "${1} is on different device than ${2}"
+else
+    echo "${1} is not on different device than ${2}"
+f
